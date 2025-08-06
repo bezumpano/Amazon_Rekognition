@@ -7,9 +7,7 @@ tasks:
       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
       unzip awscliv2.zip
       sudo ./aws/install
+      pip install boto3
+      pip install matplotlib
       cd $THEIA_WORKSPACE_ROOT
-
-tasks:
-  - init: pip install boto3 # Or pip3 install boto3 if you want to be explicit about Python 3
-          pip install matplotlib
     command: python import_lib.py # Or any other command to run your project
