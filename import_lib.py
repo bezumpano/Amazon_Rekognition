@@ -45,7 +45,7 @@ def detect_labels(photo, bucket):
             label_text = label['Name'] + ' (' + str(round(label['Confidence'], 2)) + '%)'
             plt.text(left, top - 2, label_text, color='r', fontsize=8, bbox=dict(facecolor='white', alpha=0.7))
 
-    plt.show()
+    plt.savefig("output.png")
 
     return len(response['Labels'])
 
